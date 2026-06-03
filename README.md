@@ -1,12 +1,12 @@
 # X++ (XPlusPlus) 🚀
 
-X++ is an experimental, intent-driven semantic compiler engine that treats Large Language Models like dynamic execution hardware. Write code using strict X++ grammar, standard pseudocode algorithms, or loose, unstructured English steps. The engine automatically translates your design down to optimized Python 3 or raw x86_64 NASM Assembly binaries.
+X++ is an experimental, intent-driven semantic compiler engine that treats Large Language Models like dynamic execution hardware. Write code using strict X++ grammar, standard pseudocode algorithms, or loose, unstructured English steps. The engine automatically translates your design down to optimized Python 3 or raw x86_64 NASM Assembly binaries. It has been developed using python by the founder of Atom Software, Aagastya Verma. This is my first programming language so I will largely appriciate constructive critisism and pull requests or suggestions will be the driving force of this new programming revolution.
 
 ## 🌟 Key Innovations
 
 * **Intent-Based Compilation:** The backend layout extracts functional logical patterns from conversational speech or textbook pseudo-code, bypassing rigid language syntax parsing.
-* **Cryptographic Caching Layer:** Avoids network latency and duplicate AI compilation calls by hashing your prompt configurations, source scripts, and selected models into unique SHA-256 fingerprints stored in `.x_cache`. If code does not change, execution is instant and deterministic.
-* **Self-Healing Assembly Optimization:** If a low-level target compilation fails local syntax checks, the engine reads `stderr` from the compilation utility, passes it to the AI infrastructure, patches register allocation constraints on the fly, and re-links your binary without human intervention.
+* **Cryptographic Caching Layer:** Avoids network latncy and duplicate AI compilation calls by hashing your prompt configurations, source scripts, and selected models into unique SHA-256 fingerprints stored in `.x_cache`. If code does not change, execution is instant and determnistic.
+* **Self-Healing Assembly Optimization:** If a low-level target compilation fails local syntax checks, the engine reads `stderr` from the compilation utility, passes it to the AI infrastructure, patches register allocatoinn constraints on the fly, and re-links your binary without human intervention.
 
 ## 🛠️ Instant Installation
 
@@ -19,7 +19,7 @@ Setting up X++ requires zero manual configuration.
 
 ## 🖥️ Usage
 
-Execute your source files smoothly across any system directory pathway:
+Excute your source files smoothly across any system directory pathway:
 
 ```bash
 x run test.xp
