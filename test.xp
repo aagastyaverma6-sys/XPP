@@ -1,0 +1,4 @@
+USE MODEL "openrouter/free"
+RNM=ITR
+
+out "Hello from Gemini!"

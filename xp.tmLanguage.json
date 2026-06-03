@@ -1,0 +1,38 @@
+{
+    "name": "X++",
+    "patterns": [
+        { "include": "#keywords" },
+        { "include": "#directives" },
+        { "include": "#strings" },
+        { "include": "#comments" }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.xp",
+                "match": "\\b(out|in|loop|from|to|while|push|read|safe|fail|fn)\\b"
+            }]
+        },
+        "directives": {
+            "patterns": [{
+                "name": "keyword.other.xp",
+                "match": "RNM=ITR|USE\\s+MODEL"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.xp",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                { "name": "constant.character.escape.xp", "match": "\\\\." }
+            ]
+        },
+        "comments": {
+            "patterns": [{
+                "name": "comment.line.double-slash.xp",
+                "match": "//.*$"
+            }]
+        }
+    },
+    "scopeName": "source.xp"
+}

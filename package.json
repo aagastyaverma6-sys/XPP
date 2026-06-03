@@ -1,0 +1,25 @@
+{
+    "name": "xpp-lang",
+    "displayName": "X++ Language Support",
+    "description": "Syntax highlighting for X++ (.xp) files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "xpp",
+            "aliases": ["X++", "xpp"],
+            "extensions": [".xp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "xpp",
+            "scopeName": "source.xp",
+            "path": "./syntaxes/xp.tmLanguage.json"
+        }]
+    }
+}
