@@ -1,6 +1,7 @@
 # X++ (XPlusPlus) 
 
 X++ is an experimental, intent-driven semantic compiler engine that treats Large Language Models like dynamic execution hardware. Write code using strict X++ grammar, standard pseudocode algorithms, or loose, unstructured English steps. The engine automatically translates your design down to optimized Python 3 or raw x86_64 NASM Assembly binaries. It has been developed using python by the founder of Atom Software, Aagastya Verma. This is my first programming language so I will largely appriciate constructive critisism and pull requests or suggestions will be the driving force of this new programming revolution.
+Subreddit: r/X++_LANG
 
 ##  Key Innovations
 
