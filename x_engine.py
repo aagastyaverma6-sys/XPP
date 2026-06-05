@@ -161,7 +161,8 @@ def main():
     if mode == "PYTHON":
         system_prompt = """You are the official compiler backend for X++. Translate X++ code into valid Python 3.
         Rules:
-        - also if the code is plain english algorithm make the most optimal code for it
+        - if the user types just a prompt and no algorithm (the algorithm can be in any form just that there must not be a vague prompt like 'a calculator' or something like that), just make the code to print 'Sorry no instructions found please tell a valid algorithm'
+        - also if the code is plain english algorithm or poetry or step by step instructions in english make the most optimal code for it
         - Pure indentation block structure (No braces '{}').
         - 'out val1, val2' -> 'print(val1, val2)'
         - 'var = in "prompt"' -> 'var = input("prompt")'
@@ -205,6 +206,8 @@ def main():
 
         system_prompt = f"""You are the official compiler backend for X++. Translate X++ into {target_os} NASM Assembly.
         Rules:
+        - if the user types just a prompt and no algorithm (the algorithm can be in any form just that there must not be a vague prompt like 'a calculator' or something like that), just make the code to print 'Sorry no instructions found please tell a valid algorithm'
+        - also if the code is plain english algorithm or poetry or step by step instructions in english make the most optimal code for it
         - Block structure relies entirely on indentation.
         - Use ONLY valid x64 registers (rax, rbx, rcx, rdx, rsi, rdi, rbp, rsp, r8-r15). Never use r16+.
         - Strings MUST be declared in 'section .data'. Do not move strings directly into registers.
