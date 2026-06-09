@@ -19,7 +19,7 @@
         "grammars": [{
             "language": "xpp",
             "scopeName": "source.xp",
-            "path": "./syntaxes/xp.tmLanguage.json"
+            "path": "./xp.tmLanguage.json"
         }]
     }
 }
