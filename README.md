@@ -1,4 +1,5 @@
 # X++ (XPlusPlus) v0.3
+*Programming For Everyone*
 
 **Strict pseudocode compiler + fast VM + AI intent fallback**
 
