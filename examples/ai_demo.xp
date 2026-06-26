@@ -1,0 +1,3 @@
+RNM=ITR
+USE MODEL "meta-llama/llama-3.2-3b-instruct:free"
+out "Hello from AI mode"

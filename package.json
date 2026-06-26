@@ -1,0 +1,26 @@
+{
+  "name": "xpp-lang",
+  "displayName": "X++ Language Support",
+  "description": "Syntax highlighting for X++ (.xp) files – v0.3 strict + AI",
+  "version": "0.3.0",
+  "publisher": "atom-software",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "xpp",
+      "aliases": ["X++", "xpp"],
+      "extensions": [".xp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xpp",
+      "scopeName": "source.xpp",
+      "path": "./xp.tmLanguage.json"
+    }]
+  }
+}

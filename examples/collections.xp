@@ -1,0 +1,11 @@
+RNM=XITR
+nums = [1,2,3]
+push 4 to nums
+loop n in nums:
+  out n
+end
+safe:
+  x = 1 / 0
+fail e:
+  out "caught", e
+end

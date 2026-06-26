@@ -1,0 +1,44 @@
+{
+  "name": "X++",
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.xpp",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#directives" },
+    { "include": "#strings" },
+    { "include": "#comments" },
+    { "include": "#numbers" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control.xpp",
+        "match": "\\b(fn|end|if|elif|else|while|loop|from|to|step|in|safe|fail|return|break|continue|out|push|and|or|not|true|false|nil|len|read)\\b"
+      }]
+    },
+    "directives": {
+      "patterns": [{
+        "name": "keyword.other.xpp",
+        "match": "\\bRNM\\s*=\\s*(XCOM|XITR|ITR|AI)\\b|USE\\s+MODEL\\b"
+      }]
+    },
+    "strings": {
+      "name": "string.quoted.double.xpp",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [{ "name": "constant.character.escape.xpp", "match": "\\\\." }]
+    },
+    "comments": {
+      "patterns": [{
+        "name": "comment.line.number-sign.xpp",
+        "match": "#.*$"
+      }]
+    },
+    "numbers": {
+      "patterns": [{
+        "name": "constant.numeric.xpp",
+        "match": "\\b\\d+(\\.\\d+)?\\b"
+      }]
+    }
+  }
+}
