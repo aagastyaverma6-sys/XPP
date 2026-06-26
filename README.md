@@ -1,4 +1,4 @@
-# X++ (XPlusPlus) v0.3
+# X++ (XPlusPlus) v0.3.5
 *Programming For Everyone*
 
 **Strict pseudocode compiler + fast VM + AI intent fallback**
@@ -9,10 +9,10 @@ It has been developed using python by the founder of Atom Software, Aagastya Ver
 
 Subreddit: r/X++_LANG
 
-## Key Innovations – v0.3
+## Key Innovations – v0.3.5
 
-- **XCOM – Intent-Based Strict Compilation:** NEW in 0.3. A real deterministic compiler front-end – regex text transpiler, ~0.3ms / KLOC, C-like speed. Optional Lark AST validation for Java-like safety. Outputs Python bytecode / .pyc.
-- **XITR – Fast VM:** NEW in 0.3. Code-object cache, warm start 0ms – Java-like. Perfect for scripting.
+- **XCOM – Intent-Based Strict Compilation:** NEW in 0.3.5. A real deterministic compiler front-end – regex text transpiler, ~0.3ms / KLOC, C-like speed. Optional Lark AST validation for Java-like safety. Outputs Python bytecode / .pyc.
+- **XITR – Fast VM:** NEW in 0.3.5 Code-object cache, warm start 0ms – Java-like. Perfect for scripting.
 - **ITR – AI Intent Compiler (preserved):** The backend extracts functional logical patterns from conversational speech or textbook pseudo-code, bypassing rigid language syntax parsing.
 - **Cryptographic Caching Layer:** Avoids network latency and duplicate AI compilation calls by hashing your prompt configurations, source scripts, OS ABI, and selected models into unique SHA-256 fingerprints stored in `~/.xpp_cache`. If code does not change, execution is instant and deterministic.
 - **Self-Healing Assembly Optimization:** If a low-level target compilation fails local syntax checks, the engine reads `stderr` from the compilation utility, passes it to the AI infrastructure, patches register allocation constraints on the fly, and re-links your binary without human intervention.
@@ -69,7 +69,7 @@ x check app.xp --strict-ast
 x run ai_demo.xp --mode ITR
 ```
 
-### Semantic Validation & Guardrails (Updated for v0.3)
+### Semantic Validation & Guardrails (Updated for v0.3.5)
 
 Strict modes (`XCOM` / `XITR`) use a real deterministic compiler – no LLM involved.
 
@@ -82,4 +82,5 @@ It completely bypasses standard AI hallucinations or conversational chatter, tre
 
 ## About
 
-This is my first time creating a programming language, please tell any issues or flaws in the code. Constructive criticism and suggestions and pull requests are highly appreciated.
+This language is in its beta phase currently, so updates may role out constantly, you can update your X++ installation by removing the folder and installing the new version.
+The legacy version is still available to use at https://github.com/aagastyaverma6-sys/XPlusPlus/
