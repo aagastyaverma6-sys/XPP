@@ -23,7 +23,7 @@ x run app.xp
 
 `x` auto-detects `RNM=ZITR`/`RNM=ZCOM` headers, builds `xppvm` once if it's missing (needs g++/clang), and runs your pseudocode on the native VM. Everything stays exactly as simple as before — the VM is plumbing, not something you manage.
 
-Subreddit: r/xpp_lang · Author: Aagastya Verma / Atom Software
+Subreddit: r/xpplang · Author: Aagastya Verma / Atom Software
 
 ## Modes
 
