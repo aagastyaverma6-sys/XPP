@@ -1,0 +1,14 @@
+{
+  "iconDefinitions": {
+    "xppFile": {
+      "path": "./xpp-file.png",
+      "fontColor": "#c792ea"
+    }
+  },
+  "fileExtensions": {
+    "xp": "xppFile"
+  },
+  "languageIds": {
+    "xpp": "xppFile"
+  }
+}
