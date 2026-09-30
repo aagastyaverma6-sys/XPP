@@ -85,4 +85,5 @@ changes), so `x run --mode ZJIT` is ~1 s the first time and instant after.
   run buttons wired to ZITR/ZJIT.
 - Bench suite (`bench/`) + per-OS reported numbers.
 
-GPL-3.0 – Aagastya Verma / Atom Software · r/X++_LANG
+GPL-3.0 – Aagastya Verma / Atom Software · r/xpplang
+
