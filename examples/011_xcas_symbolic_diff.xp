@@ -1,0 +1,12 @@
+RNM = XITR
+use XCAS
+
+expr1 = "x^3 + 4*x^2 - 5*x + 7"
+d1 = XCAS.diff(expr1, "x")
+out "d/dx (" + expr1 + ") ="
+out "  ->", d1
+
+expr2 = "sin(x) + cos(x)"
+d2 = XCAS.diff(expr2, "x")
+out "d/dx (" + expr2 + ") ="
+out "  ->", d2

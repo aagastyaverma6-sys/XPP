@@ -1,0 +1,12 @@
+RNM = ZITR
+use functools
+
+fn fib_slow(n):
+  if n <= 1:
+    return n
+  end
+  return fib_slow(n - 1) + fib_slow(n - 2)
+end
+
+out "Fib(10) =", fib_slow(10)
+out "Fib(15) =", fib_slow(15)

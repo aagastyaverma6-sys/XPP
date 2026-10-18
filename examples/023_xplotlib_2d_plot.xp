@@ -1,0 +1,11 @@
+RNM = XITR
+use Xplotlib
+
+xs = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
+ys = [0.0, 1.0, 4.0, 9.0, 16.0, 25.0]
+
+p = Xplotlib.plot_2d(xs, ys, "f(x) = x^2", "x", "y")
+out "Plot Created:", p["title"]
+out "Total Data Points:", p["points"]
+out "Axis Range X:", p["x_range"]
+out "Axis Range Y:", p["y_range"]

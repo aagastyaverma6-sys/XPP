@@ -1,0 +1,9 @@
+RNM = ZITR
+use GameX
+
+supported = GameX.formats()["2d"]
+out "Supported 2D Formats Count:", len(supported)
+
+sprite = GameX.load_sprite("player_walk.aseprite", "ASEPRITE")
+out "Loaded Sprite:", sprite["name"]
+out "Sprite Format:", sprite["format"]

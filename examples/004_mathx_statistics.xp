@@ -1,0 +1,13 @@
+RNM = XITR
+use mathX
+
+dataset = [12.0, 15.0, 22.0, 28.0, 31.0, 42.0, 50.0]
+out "Dataset:", dataset
+m = mathX.mean(dataset)
+out "Mean:", m
+med = mathX.median(dataset)
+out "Median:", med
+var = mathX.variance(dataset)
+out "Variance:", var
+std_dev = mathX.std(dataset)
+out "Standard Deviation:", std_dev

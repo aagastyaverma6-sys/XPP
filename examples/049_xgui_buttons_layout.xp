@@ -1,0 +1,10 @@
+RNM = ZITR
+use XGUI
+
+win = XGUI.window("Control Panel", 600, 400)
+btn1 = XGUI.button("Start Engine", "primary")
+btn2 = XGUI.button("Stop Engine", "danger")
+
+out "Window Initialized:", win["title"]
+out "Button 1 Created  :", btn1["label"]
+out "Button 2 Created  :", btn2["label"]

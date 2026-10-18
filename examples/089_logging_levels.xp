@@ -1,0 +1,8 @@
+RNM = ZITR
+use logging
+
+logging.basicConfig("DEBUG")
+logging.info("Starting X++ task runner")
+logging.warning("Resource usage elevated")
+logging.error("Failed to connect to secondary daemon")
+out "Logging output captured"

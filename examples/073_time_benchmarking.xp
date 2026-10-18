@@ -1,0 +1,13 @@
+RNM = ZITR
+use time
+
+t0 = time.perf_counter()
+total = 0
+loop i from 0 to 10000:
+  total = total + i
+end
+t1 = time.perf_counter()
+
+elapsed = t1 - t0
+out "Computed Sum :", total
+out "Elapsed Time :", elapsed, "seconds"

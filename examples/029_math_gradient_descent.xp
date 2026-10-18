@@ -1,0 +1,19 @@
+RNM = XCOM
+use XCalculus
+use Xnum
+
+# Minimize f(x) = (x - 4)^2
+fn cost(x):
+  return (x - 4.0) * (x - 4.0)
+end
+
+x = 0.0
+lr = 0.1
+loop step from 0 to 20:
+  grad = XCalculus.derivative(cost, x)
+  x = x - (lr * grad)
+end
+
+out "=== Gradient Descent Convergence ==="
+out "Optimal x found:", x
+out "Exact minimum  : 4.0"

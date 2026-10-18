@@ -1,0 +1,17 @@
+RNM = XITR
+use sqlite3
+
+conn = sqlite3.connect(":memory:")
+sqlite3.execute(conn, "CREATE TABLE accounts (name TEXT, balance REAL);")
+sqlite3.execute(conn, "INSERT INTO accounts VALUES ('Alice', 1000.0);")
+sqlite3.execute(conn, "INSERT INTO accounts VALUES ('Bob', 500.0);")
+
+# Transfer 200 from Alice to Bob
+sqlite3.execute(conn, "UPDATE accounts SET balance = balance - 200 WHERE name = 'Alice';")
+sqlite3.execute(conn, "UPDATE accounts SET balance = balance + 200 WHERE name = 'Bob';")
+
+rows = sqlite3.fetchall(sqlite3.execute(conn, "SELECT * FROM accounts;"))
+out "=== Updated Balances ==="
+loop acc in rows:
+  out "Account:", acc[0], "Balance:", acc[1]
+end

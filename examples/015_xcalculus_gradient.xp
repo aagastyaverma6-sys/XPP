@@ -1,0 +1,12 @@
+RNM = XITR
+use XCalculus
+
+fn surface(pt):
+  # f(x, y) = x^2 + y^2
+  return (pt[0] * pt[0]) + (pt[1] * pt[1])
+end
+
+grad = XCalculus.gradient(surface, [1.0, 2.0])
+out "Gradient of (x^2 + y^2) at [1, 2]:"
+out "grad =", grad
+out "Expected: [2.0, 4.0]"

@@ -1,0 +1,8 @@
+RNM = XITR
+use XGUI
+
+theme = ":root { --bg: #0d1117; --fg: #c9d1d9; --accent: #58a6ff; }"
+win = XGUI.window("Dark Mode Theme", 800, 600)
+html = XGUI.render_html(win, theme)
+out "Rendered Themed Window HTML:"
+out html

@@ -1,0 +1,12 @@
+RNM = XCOM
+use XWeb
+
+metrics = [
+  {"label": "Total Requests", "value": "1.2M"},
+  {"label": "Average Latency", "value": "0.4ms"},
+  {"label": "Active Nodes", "value": "64"}
+]
+
+dash = XWeb.dashboard("System Status", metrics)
+out "=== Generated Dashboard HTML ==="
+out dash

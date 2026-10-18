@@ -1,0 +1,9 @@
+RNM = ZITR
+use Xin
+
+keys = Xin.poll_keys()
+out "=== Xin Input Polling ==="
+out "Keys active:", keys
+
+bind = Xin.map_input("SPACE", "JUMP")
+out "Key mapped:", bind["key"], "->", bind["action"]

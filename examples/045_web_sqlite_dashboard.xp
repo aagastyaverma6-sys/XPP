@@ -1,0 +1,14 @@
+RNM = XCOM
+use XWeb
+use sqlite3
+
+db = sqlite3.connect(":memory:")
+sqlite3.execute(db, "CREATE TABLE users (id INTEGER, name TEXT);")
+sqlite3.execute(db, "INSERT INTO users VALUES (1, 'Alice');")
+sqlite3.execute(db, "INSERT INTO users VALUES (2, 'Bob');")
+
+rows = sqlite3.fetchall(sqlite3.execute(db, "SELECT * FROM users;"))
+out "Database Rows:", rows
+
+page = XWeb.page("User Directory", "Total users registered: 2")
+out "Dashboard generated successfully"

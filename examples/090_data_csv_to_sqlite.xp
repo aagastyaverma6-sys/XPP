@@ -1,0 +1,18 @@
+RNM = XITR
+use csv
+use sqlite3
+
+raw_csv = "id,product,price\n1,Laptop,1200.0\n2,Mouse,25.0\n3,Monitor,300.0\n"
+rows = csv.reader(raw_csv)
+header = rows[0]
+
+conn = sqlite3.connect(":memory:")
+sqlite3.execute(conn, "CREATE TABLE inventory (id INT, product TEXT, price REAL);")
+
+loop r in rows[1:]:
+  sql = "INSERT INTO inventory VALUES (" + str(r[0]) + ", '" + str(r[1]) + "', " + str(r[2]) + ");"
+  sqlite3.execute(conn, sql)
+end
+
+res = sqlite3.fetchall(sqlite3.execute(conn, "SELECT COUNT(*) FROM inventory;"))
+out "Total items loaded into SQLite:", res[0][0]

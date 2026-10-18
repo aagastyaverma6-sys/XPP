@@ -1,0 +1,9 @@
+RNM = XITR
+use GameX
+
+supported3d = GameX.formats()["3d"]
+out "Supported 3D Formats Count:", len(supported3d)
+
+mesh = GameX.load_mesh("hero_character.glb", "GLTF/GLB")
+out "Loaded 3D Mesh:", mesh["name"]
+out "Vertices Count:", mesh["vertex_count"]

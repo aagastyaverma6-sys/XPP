@@ -1,0 +1,9 @@
+RNM = ZITR
+use os
+
+cwd = os.getcwd()
+out "Current Directory:", cwd
+out "OS Platform Name :", os.name
+
+user = os.getenv("USER")
+out "Current User env :", user

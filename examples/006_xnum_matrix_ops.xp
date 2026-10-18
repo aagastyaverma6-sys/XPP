@@ -1,0 +1,13 @@
+RNM = ZITR
+use Xnum
+
+out "=== Xnum Matrix Creation ==="
+z = Xnum.zeros(3, 3)
+out "Zeros 3x3:", z
+
+eye = Xnum.eye(3)
+out "Identity 3x3:", eye
+
+m = [[1, 2], [3, 4]]
+t = Xnum.transpose(m)
+out "Transposed 2x2:", t

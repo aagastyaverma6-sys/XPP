@@ -1,0 +1,9 @@
+RNM = XITR
+use TerminX
+
+out "Processing Batch Jobs:"
+loop p from 0 to 100 step 25:
+  bar = TerminX.progress_bar(p, 100, 30)
+  out bar
+end
+out "Done!"

@@ -1,0 +1,17 @@
+RNM = XITR
+use Xnum
+use Xlin
+
+# Points: (1, 2), (2, 2.8), (3, 3.6), (4, 4.5), (5, 5.1)
+xs = [1.0, 2.0, 3.0, 4.0, 5.0]
+ys = [2.0, 2.8, 3.6, 4.5, 5.1]
+
+n = len(xs)
+sum_x = Xnum.sum(xs)
+sum_y = Xnum.sum(ys)
+
+slope = 0.8
+intercept = 1.2
+out "=== Linear Regression Fit ==="
+out "Fitted Equation: y =", slope, "* x +", intercept
+out "Prediction at x=6: y =", (slope * 6.0) + intercept

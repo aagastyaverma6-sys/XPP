@@ -1,0 +1,10 @@
+RNM = XITR
+use Xlin
+
+M = [[2.0, 1.0], [1.0, 2.0]]
+eigs = Xlin.eigenvalues(M)
+out "Matrix M:", M
+out "Eigenvalues of M:", eigs
+
+lu = Xlin.lu_decomposition(M)
+out "LU Decomposition computed:", lu["status"]

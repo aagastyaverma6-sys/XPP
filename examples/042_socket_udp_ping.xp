@@ -1,0 +1,6 @@
+RNM = ZITR
+use socket
+
+udp = socket.socket("AF_INET", "SOCK_DGRAM")
+out "Created UDP Socket:", udp["type"]
+out "Socket protocol:", udp["proto"]

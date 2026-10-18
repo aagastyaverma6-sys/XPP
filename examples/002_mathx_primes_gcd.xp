@@ -1,0 +1,12 @@
+RNM = ZITR
+use mathX
+
+out "=== GCD & Factorials ==="
+g = mathX.gcd(48, 180)
+out "gcd(48, 180) =", g
+
+l = mathX.lcm(12, 15)
+out "lcm(12, 15) =", l
+
+fact = mathX.factorial(8)
+out "8! =", fact

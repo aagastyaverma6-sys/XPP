@@ -1,0 +1,17 @@
+RNM = XITR
+use TerminX
+use random
+
+out TerminX.bold("=== Mini Dungeon Crawler ===")
+hero_hp = 100
+goblin_hp = 40
+
+dmg = random.randint(15, 25)
+goblin_hp = goblin_hp - dmg
+out TerminX.green("Hero attacks goblin for ") + str(dmg) + " damage!"
+
+if goblin_hp <= 0:
+  out TerminX.yellow("Goblin defeated! You win!")
+else:
+  out "Goblin HP remaining:", goblin_hp
+end

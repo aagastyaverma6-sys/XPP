@@ -1,0 +1,11 @@
+RNM = XITR
+use Xanmin8
+
+source = Xanmin8.Circle(2.0, "red")
+target = Xanmin8.Square(3.0, "blue")
+
+anim = Xanmin8.transform(source, target, 2.0)
+out "Animation Created:"
+out "From    :", anim["from"]["type"]
+out "To      :", anim["to"]["type"]
+out "Duration:", anim["duration"], "seconds"

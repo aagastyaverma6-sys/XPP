@@ -1,0 +1,9 @@
+RNM = XCOM
+use Xnum
+
+out "=== Xnum Linspace ==="
+steps = Xnum.linspace(0.0, 1.0, 5)
+out "Linspace 0 to 1 (5 pts):", steps
+
+rng = Xnum.arange(0, 10, 2)
+out "Arange 0 to 10 (step 2):", rng

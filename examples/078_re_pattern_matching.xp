@@ -1,0 +1,12 @@
+RNM = XITR
+use re
+
+text = "Contact devs at aagastyaverma6@gmail.com or support@atom.dev"
+emails = re.findall("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", text)
+out "=== Found Email Addresses ==="
+loop e in emails:
+  out " ->", e
+end
+
+subbed = re.sub("atom\.dev", "xpp.dev", text)
+out "Replaced text:", subbed

@@ -1,0 +1,10 @@
+RNM = ZITR
+use Xanmin8
+
+c = Xanmin8.Circle(2.5, "#ff3366")
+s = Xanmin8.Square(4.0, "#33ccff")
+txt = Xanmin8.MathTex("e^{i\pi} + 1 = 0")
+
+out "Created Circle  : radius =", c["radius"]
+out "Created Square  : side   =", s["side"]
+out "Created MathTex : formula=", txt["tex"]

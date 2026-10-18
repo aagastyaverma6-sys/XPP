@@ -1,0 +1,19 @@
+RNM = ZITR
+use GameX
+use mathX
+
+ship_x = 0.0
+ship_y = 0.0
+vx = 2.0
+vy = 3.0
+thrust = 1.5
+angle = 30.0 * (mathX.pi / 180.0)
+
+vx = vx + thrust * mathX.cos(angle)
+vy = vy + thrust * mathX.sin(angle)
+ship_x = ship_x + vx
+ship_y = ship_y + vy
+
+out "=== Space Ship Flight Sim ==="
+out "Ship Position :", ship_x, ",", ship_y
+out "Ship Velocity :", vx, ",", vy

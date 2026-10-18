@@ -1,0 +1,8 @@
+RNM = ZITR
+use http
+
+out "HTTP 200:", http.HTTPStatus.OK
+out "HTTP 201:", http.HTTPStatus.CREATED
+out "HTTP 400:", http.HTTPStatus.BAD_REQUEST
+out "HTTP 404:", http.HTTPStatus.NOT_FOUND
+out "HTTP 500:", http.HTTPStatus.INTERNAL_SERVER_ERROR

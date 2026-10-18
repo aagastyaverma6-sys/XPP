@@ -1,0 +1,6 @@
+RNM = ZITR
+use mathX
+
+out "Running on RNM = ZITR (Native C++ VM)"
+val = mathX.factorial(6)
+out "Factorial of 6 =", val

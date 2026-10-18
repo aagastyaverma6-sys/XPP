@@ -1,0 +1,10 @@
+RNM = ZITR
+use Xsci
+
+fn target(x):
+  # root of x^2 - 4 = 0 -> x = 2
+  return (x * x) - 4.0
+end
+
+root = Xsci.root(target, 1.0, 3.0)
+out "Root of x^2 - 4 in [1, 3] =", root

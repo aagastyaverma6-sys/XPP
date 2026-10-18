@@ -1,0 +1,9 @@
+RNM = XITR
+use XGUI
+
+win = XGUI.window("User Settings", 500, 500)
+f_name = XGUI.input_field("Username", "text")
+slider = XGUI.slider("Volume", 0, 100, 75)
+
+out "Form Field Created:", f_name["label"]
+out "Slider Created    :", slider["label"], "at value:", slider["value"]

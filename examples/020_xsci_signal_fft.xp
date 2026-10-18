@@ -1,0 +1,8 @@
+RNM = XITR
+use Xsci
+
+signal = [1.0, 0.0, -1.0, 0.0, 1.0, 0.0, -1.0, 0.0]
+out "Input Time-domain Signal:", signal
+spectrum = Xsci.fft(signal)
+out "FFT Spectrum computed: length =", len(spectrum)
+out "DC Component:", spectrum[0]
