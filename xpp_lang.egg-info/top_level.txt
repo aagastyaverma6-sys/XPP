@@ -1,3 +1,0 @@
-x_engine
-xite
-xpp_core
