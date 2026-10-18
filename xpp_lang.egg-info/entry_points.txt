@@ -1,0 +1,4 @@
+[console_scripts]
+x = xpp_core.cli:main
+xite = xite:main
+xpp = xpp_core.cli:main

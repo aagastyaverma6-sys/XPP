@@ -1,0 +1,39 @@
+{
+  "name": "xpp-lang",
+  "displayName": "X++ Language + File Icons",
+  "description": "X++ (.xp) syntax highlighting, file icon theme, and Code Runner integration – v0.4.1",
+  "version": "0.4.1",
+  "publisher": "atom-software",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "icon": "icons/xpp.png",
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "xpp",
+        "aliases": ["X++", "xpp"],
+        "extensions": [".xp"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xpp",
+        "scopeName": "source.xpp",
+        "path": "./grammar/xp.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "xpp-file-icons",
+        "label": "X++ File Icons",
+        "path": "./icons/theme.json"
+      }
+    ]
+  }
+}
