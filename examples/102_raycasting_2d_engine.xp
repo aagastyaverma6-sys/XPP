@@ -1,0 +1,17 @@
+RNM = ZITR
+use mathX
+use GraphiX
+
+player_x = 2.0
+player_y = 2.0
+wall_x = 5.0
+wall_y = 5.0
+
+dx = wall_x - player_x
+dy = wall_y - player_y
+dist = mathX.sqrt((dx * dx) + (dy * dy))
+
+out "=== 2D Raycast Intersection ==="
+out "Player Position : (2, 2)"
+out "Wall Target     : (5, 5)"
+out "Raycast Distance:", dist

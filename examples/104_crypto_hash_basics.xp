@@ -1,0 +1,20 @@
+RNM = XCOM
+use mathX
+use itertools
+
+fn rolling_hash(s):
+  h = 0
+  p = 31
+  m = 1000000009
+  p_pow = 1
+  loop ch in s:
+    h = (h + ord(ch) * p_pow) % m
+    p_pow = (p_pow * p) % m
+  end
+  return h
+end
+
+msg = "XPlusPlus-v0.4.5"
+hash_val = rolling_hash(msg)
+out "Message:", msg
+out "Rolling Hash:", hash_val

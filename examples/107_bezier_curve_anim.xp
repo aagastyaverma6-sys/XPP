@@ -1,0 +1,25 @@
+RNM = XITR
+use mathX
+use Xanmin8
+
+# Control points: P0, P1, P2, P3
+p0 = [0.0, 0.0]
+p1 = [1.0, 3.0]
+p2 = [3.0, 3.0]
+p3 = [4.0, 0.0]
+
+fn bezier_point(t):
+  u = 1.0 - t
+  tt = t * t
+  uu = u * u
+  uuu = uu * u
+  ttt = tt * t
+  
+  x = (uuu * p0[0]) + (3.0 * uu * t * p1[0]) + (3.0 * u * tt * p2[0]) + (ttt * p3[0])
+  y = (uuu * p0[1]) + (3.0 * uu * t * p1[1]) + (3.0 * u * tt * p2[1]) + (ttt * p3[1])
+  return [x, y]
+end
+
+mid = bezier_point(0.5)
+out "=== Cubic Bezier Evaluation ==="
+out "Midpoint at t=0.5:", mid

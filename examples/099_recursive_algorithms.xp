@@ -1,0 +1,24 @@
+RNM = ZJIT
+
+fn quicksort(arr):
+  if len(arr) <= 1:
+    return arr
+  end
+  pivot = arr[0]
+  less = []
+  greater = []
+  loop i from 1 to len(arr) - 1:
+    x = arr[i]
+    if x <= pivot:
+      push x to less
+    else:
+      push x to greater
+    end
+  end
+  return quicksort(less) + [pivot] + quicksort(greater)
+end
+
+data = [42, 12, 88, 3, 27, 91, 15]
+out "Unsorted Data:", data
+sorted_data = quicksort(data)
+out "Sorted Data  :", sorted_data

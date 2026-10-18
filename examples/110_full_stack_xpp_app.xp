@@ -1,0 +1,24 @@
+RNM = XITR
+use sqlite3
+use XWeb
+use TerminX
+
+out TerminX.banner("X++ Full-Stack Demo", "magenta")
+
+# 1. Database layer
+conn = sqlite3.connect(":memory:")
+sqlite3.execute(conn, "CREATE TABLE stats (key TEXT, val INT);")
+sqlite3.execute(conn, "INSERT INTO stats VALUES ('visits', 1540);")
+sqlite3.execute(conn, "INSERT INTO stats VALUES ('stars', 48);")
+
+rows = sqlite3.fetchall(sqlite3.execute(conn, "SELECT * FROM stats;"))
+out TerminX.green("[DB] Stats loaded:")
+loop r in rows:
+  out "  *", r[0], "=", r[1]
+end
+
+# 2. Web layer
+dash = XWeb.page("System Overview", "Database and Web service synchronized.")
+out TerminX.blue("[WEB] Generated dashboard view:")
+out "Length of HTML payload:", len(dash), "bytes"
+out TerminX.bold("=== Full-Stack Pipeline Complete ===")
