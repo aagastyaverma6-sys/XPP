@@ -1,0 +1,10 @@
+RNM = ZITR
+use ScrapeX
+
+html = "<div class='container'><span class='item'>Apple</span><span class='item'>Orange</span></div>"
+doc = ScrapeX.parse(html)
+items = ScrapeX.select(doc, ".item")
+out "Found Items Count:", len(items)
+loop it in items:
+  out " - Item:", ScrapeX.get_text(it)
+end

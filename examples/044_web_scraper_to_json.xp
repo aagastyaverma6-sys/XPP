@@ -1,0 +1,13 @@
+RNM = XITR
+use ScrapeX
+use json
+
+raw_html = "<div class='post'><h2>Release 0.4.5</h2><p>Huge update with 34 stdlibs</p></div>"
+doc = ScrapeX.parse(raw_html)
+title = ScrapeX.get_text(ScrapeX.select_one(doc, "h2"))
+body = ScrapeX.get_text(ScrapeX.select_one(doc, "p"))
+
+record = {"title": title, "body": body, "scraped_at": "2026-10-18"}
+json_out = json.dumps(record)
+out "=== Exported JSON Record ==="
+out json_out

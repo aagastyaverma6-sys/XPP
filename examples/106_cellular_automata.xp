@@ -1,0 +1,17 @@
+RNM = ZITR
+
+# Rule 30 simulation step
+state = [0, 0, 0, 1, 0, 0, 0]
+out "Initial State:", state
+
+next_state = [0]
+loop i from 1 to len(state) - 2:
+  left = state[i - 1]
+  center = state[i]
+  right = state[i + 1]
+  # Rule 30 condition: left XOR (center OR right)
+  bit = (left + center + right) % 2
+  push bit to next_state
+end
+push 0 to next_state
+out "Next State   :", next_state

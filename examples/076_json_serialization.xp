@@ -1,0 +1,16 @@
+RNM = XCOM
+use json
+
+cfg = {
+  "app": "XPP",
+  "version": "0.4.5",
+  "engines": ["ZITR", "ZCOM", "ZJIT", "XCOM", "XITR"],
+  "active": True
+}
+
+s = json.dumps(cfg)
+out "Serialized JSON:"
+out s
+
+parsed = json.loads(s)
+out "Parsed back app name:", parsed["app"]

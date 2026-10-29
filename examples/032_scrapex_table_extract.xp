@@ -1,0 +1,8 @@
+RNM = XITR
+use ScrapeX
+
+table_html = "<table><tr><th>Lang</th><th>Speed</th></tr><tr><td>X++</td><td>Native</td></tr><tr><td>Python</td><td>Interpreted</td></tr></table>"
+table_data = ScrapeX.extract_table(table_html)
+out "=== Extracted Table ==="
+out "Headers:", table_data["headers"]
+out "Rows   :", table_data["rows"]

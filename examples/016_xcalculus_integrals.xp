@@ -1,0 +1,12 @@
+RNM = ZITR
+use XCalculus
+
+fn quad(x):
+  return x * x
+end
+
+# Integrate x^2 from 0 to 3 -> exact = 9.0
+area = XCalculus.integrate_trapezoid(quad, 0.0, 3.0, 100)
+out "Integral of x^2 from 0 to 3:"
+out "Computed Area =", area
+out "Exact Area    = 9.0"

@@ -1,0 +1,12 @@
+RNM = ZITR
+use GameX
+
+box1 = {"x": 10, "y": 10, "w": 30, "h": 30}
+box2 = {"x": 25, "y": 25, "w": 40, "h": 40}
+box3 = {"x": 100, "y": 100, "w": 20, "h": 20}
+
+c12 = GameX.aabb_collision(box1, box2)
+out "Collision box1 & box2:", c12
+
+c13 = GameX.aabb_collision(box1, box3)
+out "Collision box1 & box3:", c13

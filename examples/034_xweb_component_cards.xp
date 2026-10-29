@@ -1,0 +1,10 @@
+RNM = XITR
+use XWeb
+
+card1 = XWeb.card("ZITR Engine", "Native high-speed bytecode interpreter.", "Launch")
+card2 = XWeb.card("ZCOM Compiler", "Ahead-of-Time native executable builder.", "Compile")
+
+out "Component 1 HTML:"
+out card1
+out "Component 2 HTML:"
+out card2

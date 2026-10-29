@@ -1,0 +1,20 @@
+RNM = XITR
+use json
+use http
+
+routes = {
+  "/api/version": {"version": "0.4.5", "status": "active"},
+  "/api/ping": {"ping": "pong"}
+}
+
+fn handle_request(path):
+  if path in routes:
+    return {"status": http.HTTPStatus.OK, "body": json.dumps(routes[path])}
+  end
+  return {"status": http.HTTPStatus.NOT_FOUND, "body": json.dumps({"error": "not found"})}
+end
+
+req1 = handle_request("/api/version")
+out "Request /api/version:"
+out "Status:", req1["status"]
+out "Body  :", req1["body"]

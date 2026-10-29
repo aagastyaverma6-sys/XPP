@@ -1,0 +1,11 @@
+RNM = XCOM
+use Xsci
+
+p1 = [0.0, 0.0, 0.0]
+p2 = [3.0, 4.0, 0.0]
+
+dist = Xsci.euclidean_distance(p1, p2)
+out "Euclidean distance p1-p2 =", dist
+
+c_sim = Xsci.cosine_similarity([1.0, 0.0], [1.0, 1.0])
+out "Cosine similarity [1,0] & [1,1] =", c_sim

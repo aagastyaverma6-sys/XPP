@@ -1,0 +1,18 @@
+RNM = XITR
+use mathX
+use Xsci
+
+freq = 440.0
+sample_rate = 8000.0
+samples = []
+
+loop i from 0 to 16:
+  t = i / sample_rate
+  # fundamental + 2nd harmonic
+  val = mathX.sin(2.0 * mathX.pi * freq * t) + 0.5 * mathX.sin(4.0 * mathX.pi * freq * t)
+  push val to samples
+end
+
+out "=== Synthesized Audio Samples (A4 440Hz) ==="
+out "Generated Samples Count:", len(samples)
+out "First 4 Samples:", samples[:4]

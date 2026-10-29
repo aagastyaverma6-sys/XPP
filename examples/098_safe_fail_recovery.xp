@@ -1,0 +1,12 @@
+RNM = ZITR
+
+out "=== Safe / Fail Resilience ==="
+safe:
+  out "Attempting dangerous division:"
+  denom = 0
+  val = 100 / denom
+  out "Never reaches here"
+fail err:
+  out "Caught handled error successfully!"
+end
+out "Program recovered and continues normally"

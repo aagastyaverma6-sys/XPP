@@ -1,0 +1,10 @@
+RNM = XCOM
+use GraphiX
+
+c = GraphiX.create_canvas(400, 400)
+GraphiX.rect(c, 20, 20, 360, 360, "#1a1a2e")
+GraphiX.circle(c, 200, 200, 100, "#e94560")
+
+svg = GraphiX.to_svg(c)
+out "=== Exported SVG Document ==="
+out svg

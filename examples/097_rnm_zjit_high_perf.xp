@@ -1,0 +1,9 @@
+RNM = ZJIT
+use mathX
+
+out "Running on RNM = ZJIT (Native JIT Engine)"
+acc = 1.0
+loop i from 1 to 10:
+  acc = acc * 1.5
+end
+out "Compounded Result =", acc

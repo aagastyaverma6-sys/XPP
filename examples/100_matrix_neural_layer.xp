@@ -1,0 +1,23 @@
+RNM = XITR
+use Xnum
+use mathX
+
+fn sigmoid(x):
+  return 1.0 / (1.0 + mathX.exp(-x))
+end
+
+inputs = [0.5, 0.8]
+weights = [[0.2, 0.4], [0.7, 0.1]]
+bias = [0.1, -0.2]
+
+# Compute z = W * x + b
+z1 = (weights[0][0] * inputs[0]) + (weights[0][1] * inputs[1]) + bias[0]
+z2 = (weights[1][0] * inputs[0]) + (weights[1][1] * inputs[1]) + bias[1]
+
+a1 = sigmoid(z1)
+a2 = sigmoid(z2)
+
+out "=== Neural Layer Activation ==="
+out "Layer Inputs   :", inputs
+out "Neuron 1 Output:", a1
+out "Neuron 2 Output:", a2

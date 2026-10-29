@@ -1,0 +1,6 @@
+RNM=ZITR
+total = 0
+loop i from 1 to 5000000:
+  total = total + i
+end
+out total

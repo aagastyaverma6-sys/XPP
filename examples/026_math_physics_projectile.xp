@@ -1,0 +1,18 @@
+RNM = ZITR
+use mathX
+use Xnum
+
+v0 = 50.0
+angle = 45.0 * (mathX.pi / 180.0)
+g = 9.81
+
+t_flight = (2.0 * v0 * mathX.sin(angle)) / g
+r_max = (v0 * v0 * mathX.sin(2.0 * angle)) / g
+h_max = (v0 * v0 * mathX.pow(mathX.sin(angle), 2)) / (2.0 * g)
+
+out "=== Ballistic Projectile Simulation ==="
+out "Initial Velocity :", v0, "m/s"
+out "Launch Angle     : 45 degrees"
+out "Time of Flight   :", t_flight, "s"
+out "Maximum Range    :", r_max, "m"
+out "Peak Height      :", h_max, "m"

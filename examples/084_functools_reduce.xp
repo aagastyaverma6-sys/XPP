@@ -1,0 +1,10 @@
+RNM = XCOM
+use functools
+
+fn multiply(acc, x):
+  return acc * x
+end
+
+numbers = [1, 2, 3, 4, 5]
+product = functools.reduce(multiply, numbers)
+out "Product of [1,2,3,4,5] =", product

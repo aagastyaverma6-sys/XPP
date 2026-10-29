@@ -1,0 +1,14 @@
+RNM = ZITR
+use sqlite3
+
+conn = sqlite3.connect(":memory:")
+sqlite3.execute(conn, "CREATE TABLE logs (id INT, message TEXT);")
+sqlite3.execute(conn, "INSERT INTO logs VALUES (1, 'System started');")
+sqlite3.execute(conn, "INSERT INTO logs VALUES (2, 'All tests passed');")
+
+cur = sqlite3.execute(conn, "SELECT * FROM logs;")
+rows = sqlite3.fetchall(cur)
+out "=== SQLite Records ==="
+loop r in rows:
+  out "Log Entry:", r
+end

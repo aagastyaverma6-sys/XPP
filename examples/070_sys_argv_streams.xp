@@ -1,0 +1,6 @@
+RNM = ZITR
+use sys
+
+out "Target Platform:", sys.platform
+out "sys.argv len   :", len(sys.argv)
+out "Execution path :", sys.argv[0]

@@ -1,0 +1,14 @@
+RNM = XITR
+use Xlin
+
+# System: 2x + y = 5, x + 3y = 10
+A = [[2.0, 1.0], [1.0, 3.0]]
+b = [5.0, 10.0]
+
+out "Matrix A:", A
+out "Vector b:", b
+invA = Xlin.inv(A)
+out "Inverse A:", invA
+
+x = Xlin.solve(A, b)
+out "Solution vector x =", x

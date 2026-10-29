@@ -1,0 +1,12 @@
+RNM = XITR
+use ScrapeX
+
+html = "<html><body><h1>Welcome to X++</h1><p class='intro'>The future of coding.</p></body></html>"
+doc = ScrapeX.parse(html)
+out "Parsed HTML Document:", doc["tag"]
+
+h1_node = ScrapeX.select_one(doc, "h1")
+out "H1 Heading:", ScrapeX.get_text(h1_node)
+
+p_node = ScrapeX.select_one(doc, "p.intro")
+out "Intro Paragraph:", ScrapeX.get_text(p_node)

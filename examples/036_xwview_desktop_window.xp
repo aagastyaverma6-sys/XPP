@@ -1,0 +1,11 @@
+RNM = XITR
+use XWview
+
+w = XWview.create_window("X++ App", 1024, 768)
+out "Webview Window Created:"
+out "Title :", w["title"]
+out "Width :", w["width"]
+out "Height:", w["height"]
+
+XWview.load_html(w, "<h1>Welcome to XWview</h1>")
+out "Loaded HTML content successfully"

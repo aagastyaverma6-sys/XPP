@@ -1,0 +1,10 @@
+RNM = XITR
+use GraphiX
+
+c = GraphiX.create_canvas(640, 480)
+GraphiX.circle(c, 320, 240, 80, "blue")
+
+css = "circle { fill: #00f0ff; filter: drop-shadow(0 0 10px #00f0ff); }"
+GraphiX.apply_css(c, css)
+out "Applied CSS to Canvas"
+out "Styles Attached:", c["css"]

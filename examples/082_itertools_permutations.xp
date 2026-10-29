@@ -1,0 +1,9 @@
+RNM = ZITR
+use itertools
+
+chars = ["A", "B", "C"]
+perms = itertools.permutations(chars, 2)
+out "Permutations of 2:", perms
+
+combs = itertools.combinations(chars, 2)
+out "Combinations of 2:", combs

@@ -1,0 +1,9 @@
+RNM = ZITR
+use csv
+
+raw_csv = "Name,Age,Role\nAlice,28,Lead\nBob,32,Architect\n"
+rows = csv.reader(raw_csv)
+out "=== Parsed CSV Rows ==="
+loop r in rows:
+  out " -", r
+end

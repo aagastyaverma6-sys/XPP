@@ -1,0 +1,22 @@
+RNM = ZJIT
+use random
+use mathX
+
+samples = 1000
+inside = 0
+
+loop i from 0 to samples:
+  x = random.uniform(-1.0, 1.0)
+  y = random.uniform(-1.0, 1.0)
+  d = (x * x) + (y * y)
+  if d <= 1.0:
+    inside = inside + 1
+  end
+end
+
+pi_est = 4.0 * (inside / samples)
+out "=== Monte Carlo Pi Estimator ==="
+out "Total Samples :", samples
+out "Inside Circle :", inside
+out "Estimated Pi  :", pi_est
+out "mathX.pi      :", mathX.pi

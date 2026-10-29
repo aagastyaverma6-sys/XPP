@@ -1,0 +1,19 @@
+RNM = XITR
+use random
+
+target = "XPP"
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+fn random_candidate():
+  c = ""
+  loop i from 0 to len(target):
+    idx = random.randint(0, len(alphabet) - 1)
+    c = c + alphabet[idx]
+  end
+  return c
+end
+
+c1 = random_candidate()
+out "Target String    :", target
+out "Random Candidate :", c1
+out "Generation simulated successfully"

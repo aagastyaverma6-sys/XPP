@@ -1,0 +1,6 @@
+RNM = ZCOM
+use mathX
+
+out "Running on RNM = ZCOM (Native .zexe AOT)"
+val = mathX.sqrt(100)
+out "Result of sqrt(100) =", val

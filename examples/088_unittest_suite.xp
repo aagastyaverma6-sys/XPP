@@ -1,0 +1,11 @@
+RNM = XITR
+use unittest
+
+fn add_nums(a, b):
+  return a + b
+end
+
+suite = unittest.TestSuite()
+unittest.assertEqual(add_nums(3, 4), 7, "3 + 4 should equal 7")
+unittest.assertTrue(10 > 5, "10 should be greater than 5")
+out "All assertions verified successfully"

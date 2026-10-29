@@ -1,0 +1,13 @@
+RNM = XITR
+use urllib
+
+url = "https://github.com/aagastyaverma6-sys/xpp?tab=readme&branch=main"
+parsed = urllib.urlparse(url)
+out "=== Parsed URL ==="
+out "Scheme:", parsed["scheme"]
+out "Host  :", parsed["netloc"]
+out "Path  :", parsed["path"]
+
+params = {"lang": "xpp", "version": "0.4.5"}
+encoded = urllib.urlencode(params)
+out "Encoded Query String:", encoded

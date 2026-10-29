@@ -1,0 +1,12 @@
+RNM = ZITR
+use random
+
+dice = random.randint(1, 6)
+out "Dice Roll 1-6:", dice
+
+val = random.uniform(10.0, 20.0)
+out "Uniform Float in [10, 20]:", val
+
+items = ["alpha", "beta", "gamma", "delta"]
+choice = random.choice(items)
+out "Random selection:", choice

@@ -1,0 +1,7 @@
+RNM = XITR
+use socket
+
+s = socket.socket("AF_INET", "SOCK_STREAM")
+out "Created TCP Socket:", s["type"]
+host = socket.gethostbyname("localhost")
+out "Resolved localhost IP:", host

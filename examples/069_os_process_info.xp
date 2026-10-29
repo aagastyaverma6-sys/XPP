@@ -1,0 +1,6 @@
+RNM = XITR
+use os
+
+files = os.listdir(".")
+out "Total items in current dir:", len(files)
+out "First 3 entries:", files[:3]

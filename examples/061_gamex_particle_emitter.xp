@@ -1,0 +1,8 @@
+RNM = XITR
+use GameX
+
+emitter = GameX.particle_emitter(100, 100, 50)
+out "Particle Emitter Initialized:"
+out "Origin   :", emitter["origin"]
+out "Particles:", emitter["count"]
+out "Lifespan :", emitter["lifespan"]

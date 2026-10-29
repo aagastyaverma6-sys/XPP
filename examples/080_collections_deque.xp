@@ -1,0 +1,10 @@
+RNM = XCOM
+use collections
+
+d = collections.deque([10, 20, 30])
+d.append(40)
+d.appendleft(0)
+out "Deque after appends:", list(d)
+left = d.popleft()
+out "Popped left element:", left
+out "Deque remaining    :", list(d)

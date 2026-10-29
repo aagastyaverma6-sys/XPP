@@ -1,0 +1,9 @@
+RNM = XITR
+use Xplotlib
+
+frames = 10
+p4 = Xplotlib.plot_4d_animated("Quantum Phase Evolution", frames)
+out "4D Animated Hyperplot Initialized:"
+out "Title :", p4["title"]
+out "Frames:", p4["frames"]
+out "Status:", p4["status"]

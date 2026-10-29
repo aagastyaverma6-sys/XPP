@@ -1,0 +1,11 @@
+RNM = XCOM
+use XCalculus
+
+fn f(x):
+  return x * x * x
+end
+
+df = XCalculus.derivative(f, 2.0)
+out "f(x) = x^3 at x=2"
+out "f'(2)  approx =", df
+out "Exact is 3*2^2 = 12.0"

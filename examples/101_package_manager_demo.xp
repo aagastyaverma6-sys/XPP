@@ -1,0 +1,11 @@
+RNM = XITR
+use os
+
+out "=== XPM Package Management Runtime ==="
+out "Searching for libraries in ./xpp_packages"
+pkg_dir = "./xpp_packages"
+if os.path.exists(pkg_dir):
+  out "Project package directory detected"
+else:
+  out "Running with standard decentralized library paths"
+end

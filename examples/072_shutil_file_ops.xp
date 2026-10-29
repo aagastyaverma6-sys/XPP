@@ -1,0 +1,8 @@
+RNM = XITR
+use shutil
+
+usage = shutil.disk_usage("/")
+out "=== Filesystem Disk Usage ==="
+out "Total Bytes:", usage["total"]
+out "Used  Bytes:", usage["used"]
+out "Free  Bytes:", usage["free"]
