@@ -1,0 +1,11 @@
+RNM = XITR
+use Xsci
+
+fn integrand(x):
+  return x * x + 2.0 * x
+end
+
+res = Xsci.quad(integrand, 0.0, 2.0)
+out "=== Xsci Adaptive Quad ==="
+out "Integral value:", res["value"]
+out "Estimated err :", res["error"]

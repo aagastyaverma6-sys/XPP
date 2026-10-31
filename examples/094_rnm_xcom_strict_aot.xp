@@ -1,0 +1,7 @@
+RNM = XCOM
+use mathX
+
+out "Running on RNM = XCOM (Strict Bytecode)"
+x = 9.0
+y = mathX.sqrt(x)
+out "Square root of 9 is", y

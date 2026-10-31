@@ -1,0 +1,10 @@
+RNM = XITR
+use collections
+
+groups = collections.defaultdict(list)
+groups["fruits"].append("apple")
+groups["fruits"].append("orange")
+groups["vegetables"].append("carrot")
+
+out "Fruits Category    :", groups["fruits"]
+out "Vegetables Category:", groups["vegetables"]

@@ -1,0 +1,14 @@
+RNM = XITR
+use Xanmin8
+use mathX
+
+title = Xanmin8.Text("Taylor Series Expansion")
+f1 = Xanmin8.MathTex("\sin(x) \approx x - \frac{x^3}{6} + \frac{x^5}{120}")
+
+out "Lesson Title:", title["text"]
+out "Approximation Formula:", f1["tex"]
+x_val = 0.5
+approx = x_val - (mathX.pow(x_val, 3) / 6.0) + (mathX.pow(x_val, 5) / 120.0)
+exact = mathX.sin(x_val)
+out "Approx at x=0.5:", approx
+out "Exact  at x=0.5:", exact

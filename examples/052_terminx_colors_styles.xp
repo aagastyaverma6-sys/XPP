@@ -1,0 +1,8 @@
+RNM = ZITR
+use TerminX
+
+out TerminX.bold("=== TerminX Styling Suite ===")
+out TerminX.green("[SUCCESS]") + " Pipeline initialized"
+out TerminX.yellow("[WARNING]") + " Memory threshold at 80%"
+out TerminX.red("[ERROR]  ") + " Connection dropped"
+out TerminX.blue("[INFO]   ") + " Running under ZITR native engine"

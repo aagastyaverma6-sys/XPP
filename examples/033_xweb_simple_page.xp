@@ -1,0 +1,8 @@
+RNM = ZITR
+use XWeb
+
+title = "My X++ Web App"
+body = "<h1>Hello from X++</h1><p>Running under standard RNM.</p>"
+page = XWeb.page(title, body)
+out "=== Generated HTML Document ==="
+out page

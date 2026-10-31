@@ -1,0 +1,12 @@
+RNM = XCOM
+use TerminX
+
+headers = ["ID", "Process", "CPU %", "Memory"]
+rows = [
+  ["1", "xppvm", "12.4%", "34 MB"],
+  ["2", "server", "4.1%", "128 MB"],
+  ["3", "logger", "0.2%", "16 MB"]
+]
+
+tbl = TerminX.table(headers, rows)
+out tbl

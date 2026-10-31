@@ -1,0 +1,9 @@
+RNM = ZITR
+use XWview
+
+w = XWview.create_window("Bridge Test", 800, 600)
+script = "console.log('Hello from X++ runtime!');"
+res = XWview.inject_js(w, script)
+out "JavaScript Injected:"
+out "Status:", res["status"]
+out "Code  :", res["code"]

@@ -1,0 +1,18 @@
+RNM = XCOM
+use pathlib
+use json
+
+default_cfg = {
+  "port": 8080,
+  "engine": "ZITR",
+  "log_level": "INFO",
+  "workers": 4
+}
+
+json_dump = json.dumps(default_cfg)
+loaded = json.loads(json_dump)
+
+out "=== Loaded Configuration ==="
+out "Port   :", loaded["port"]
+out "Engine :", loaded["engine"]
+out "Workers:", loaded["workers"]

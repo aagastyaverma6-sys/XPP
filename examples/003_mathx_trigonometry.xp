@@ -1,0 +1,14 @@
+RNM = XCOM
+use mathX
+
+out "=== Trigonometry Demo ==="
+angle = mathX.pi / 4.0
+s = mathX.sin(angle)
+c = mathX.cos(angle)
+out "sin(pi/4) =", s
+out "cos(pi/4) =", c
+out "sin^2 + cos^2 =", (s * s) + (c * c)
+
+sh = mathX.sinh(1.0)
+ch = mathX.cosh(1.0)
+out "cosh^2 - sinh^2 =", (ch * ch) - (sh * sh)

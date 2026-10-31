@@ -1,0 +1,12 @@
+RNM = XITR
+use http
+use json
+
+payload = {"action": "sync", "version": "0.4.5", "nodes": [1, 2, 3]}
+json_str = json.dumps(payload)
+out "Sending HTTP JSON Payload:"
+out json_str
+
+client = http.Client()
+resp = client.post("https://api.github.com/echo", json_str)
+out "Client Response Status:", resp["status"]

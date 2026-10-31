@@ -1,0 +1,7 @@
+RNM = XCOM
+use pathlib
+
+p = pathlib.Path("xpp_core/stdlib/mathX.py")
+out "Path name  :", p.name
+out "Path suffix:", p.suffix
+out "Path exists:", p.exists()

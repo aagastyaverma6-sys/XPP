@@ -1,0 +1,8 @@
+RNM = ZITR
+use collections
+
+words = ["apple", "banana", "apple", "cherry", "banana", "apple"]
+cnt = collections.Counter(words)
+out "=== Frequency Counter ==="
+out "Frequencies:", cnt
+out "Most Common:", cnt.most_common(1)

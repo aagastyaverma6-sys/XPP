@@ -1,0 +1,12 @@
+RNM = ZITR
+use Xlin
+
+m2 = [[4, 7], [2, 6]]
+det2 = Xlin.det(m2)
+out "Det 2x2 [[4,7],[2,6]] =", det2
+
+m3 = [[1, 2, 3], [0, 1, 4], [5, 6, 0]]
+det3 = Xlin.det(m3)
+out "Det 3x3 =", det3
+tr = Xlin.trace(m3)
+out "Trace 3x3 =", tr

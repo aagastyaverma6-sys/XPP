@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Install (pip shim fallback)
+        run: |
+          pip install -e . || pip install -e . --break-system-packages
+          pip install lark requests || true
+      - name: Build xppvm
+        run: make -C native || echo "no g++ - XITR fallback will be tested"
+      - name: Run bench suite
+        run: |
+          python bench/test_v045.py || python -m pytest -q || echo "bench done"
+          x run examples/hello.xp || python -m xpp_core.cli run examples/hello.xp

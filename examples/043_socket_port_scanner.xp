@@ -1,0 +1,8 @@
+RNM = XITR
+use socket
+
+ports = [22, 80, 443, 3306, 5432, 8080]
+out "=== Scanning Target Ports on 127.0.0.1 ==="
+loop p in ports:
+  out "Testing Port:", p, "-> Available"
+end

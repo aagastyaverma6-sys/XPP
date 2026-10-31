@@ -1,0 +1,13 @@
+RNM = XITR
+use mathX
+
+out "=== mathX Basics ==="
+val = mathX.sqrt(256)
+out "sqrt(256) =", val
+
+hypot = mathX.sqrt(mathX.pow(3, 2) + mathX.pow(4, 2))
+out "hypotenuse 3-4-5 =", hypot
+
+out "pi =", mathX.pi
+out "e  =", mathX.e
+out "log(e) =", mathX.log(mathX.e)

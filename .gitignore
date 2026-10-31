@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.so
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# X++ build outputs
+xppvm
+xppvm.exe
+build/
+*.xbc
+*.zexe
+*.zexe.stamp
+xpp_packages/
+xpp.lock
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/settings.json
+.idea/
+*.code-workspace
+
+# Logs
+*.log

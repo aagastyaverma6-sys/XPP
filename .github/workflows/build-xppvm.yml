@@ -1,0 +1,61 @@
+name: Build xppvm (all OS)
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact: xppvm
+            cxx: g++
+          - os: macos-latest
+            artifact: xppvm
+            cxx: clang++
+          - os: windows-latest
+            artifact: xppvm.exe
+            cxx: g++
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build xppvm (Unix)
+        if: matrix.os != 'windows-latest'
+        run: |
+          make -C native CXX=${{ matrix.cxx }}
+          ls -lh xppvm native/zjit_runtime.hpp
+      - name: Build xppvm.exe (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: cmd
+        run: |
+          call build_xppvm.bat
+          dir build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}-${{ matrix.os }}
+          path: |
+            xppvm
+            xppvm.exe
+            build/xppvm*
+            native/zjit_runtime.hpp
+            build/zjit_runtime.hpp
+      - name: Release assets
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            xppvm
+            xppvm.exe
+            build/xppvm*
+            native/zjit_runtime.hpp
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

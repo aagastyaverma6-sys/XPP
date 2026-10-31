@@ -1,0 +1,7 @@
+RNM = ZITR
+use Xplotlib
+
+data = [1.0, 4.0, 9.0, 16.0, 25.0, 16.0, 9.0, 4.0, 1.0]
+out "=== Xplotlib Terminal Graph ==="
+chart = Xplotlib.render_ascii(data, 20, 8)
+out chart

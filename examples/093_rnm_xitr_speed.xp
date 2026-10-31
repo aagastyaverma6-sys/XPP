@@ -1,0 +1,11 @@
+RNM = XITR
+use time
+
+out "Running on RNM = XITR"
+t0 = time.time()
+sum_v = 0
+loop i from 0 to 1000:
+  sum_v = sum_v + i
+end
+out "Sum 0..1000 =", sum_v
+out "Execution finished in XITR"

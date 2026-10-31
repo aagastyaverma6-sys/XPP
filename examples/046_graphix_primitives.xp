@@ -1,0 +1,10 @@
+RNM = ZITR
+use GraphiX
+
+c = GraphiX.create_canvas(800, 600)
+GraphiX.circle(c, 400, 300, 50, "#ff4444")
+GraphiX.rect(c, 50, 50, 200, 100, "#3388ff")
+GraphiX.line(c, 0, 0, 800, 600, "#ffffff")
+
+out "Canvas Objects Drawn:", len(c["elements"])
+out "Canvas Dimensions   :", c["width"], "x", c["height"]

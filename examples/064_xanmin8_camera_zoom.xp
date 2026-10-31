@@ -1,0 +1,11 @@
+RNM = XCOM
+use Xanmin8
+
+scene = Xanmin8.Scene("Fourier Series")
+c = Xanmin8.Circle(1.5, "gold")
+scene["mobjects"].append(c)
+
+svg = Xanmin8.render_svg(scene)
+out "Rendered Scene to SVG:"
+out "Mobjects in Scene:", len(scene["mobjects"])
+out svg

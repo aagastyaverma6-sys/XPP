@@ -1,0 +1,12 @@
+RNM = XITR
+use Xplotlib
+
+grid_z = [
+  [0.0, 1.0, 2.0],
+  [1.0, 2.0, 3.0],
+  [2.0, 3.0, 4.0]
+]
+
+s = Xplotlib.plot_3d(grid_z, "Surface Plot Z = X + Y")
+out "3D Mesh Generated:", s["title"]
+out "Grid Dimensions:", s["rows"], "x", s["cols"]

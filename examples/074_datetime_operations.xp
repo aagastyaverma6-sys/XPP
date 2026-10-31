@@ -1,0 +1,8 @@
+RNM = XITR
+use datetime
+
+current = datetime.now()
+out "Current ISO Timestamp:", current.isoformat()
+out "Year :", current.year
+out "Month:", current.month
+out "Day  :", current.day

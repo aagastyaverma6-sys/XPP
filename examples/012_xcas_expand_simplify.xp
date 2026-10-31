@@ -1,0 +1,12 @@
+RNM = ZITR
+use XCAS
+
+raw = "2*x + 3*x - 4 + 10"
+simp = XCAS.simplify(raw)
+out "Simplify:", raw
+out "Result  :", simp
+
+poly = "(x + 2)*(x + 3)"
+exp_res = XCAS.expand(poly)
+out "Expand  :", poly
+out "Result  :", exp_res

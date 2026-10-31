@@ -1,0 +1,12 @@
+RNM = XITR
+use XCalculus
+
+fn field(pt):
+  # F = [x*y, y*z, z*x]
+  return [pt[0] * pt[1], pt[1] * pt[2], pt[2] * pt[0]]
+end
+
+div = XCalculus.divergence(field, [1.0, 1.0, 1.0])
+out "Divergence at [1,1,1] =", div
+c = XCalculus.curl(field, [1.0, 1.0, 1.0])
+out "Curl at [1,1,1]       =", c
